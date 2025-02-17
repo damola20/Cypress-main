@@ -1,0 +1,6 @@
+{
+    "email": "damolabamijoko@gmail.com",
+    "password": "Sacristy1234.",
+    "expected_url": "/?ref_=nav_ya_signin",
+    "description": "Valid login test"
+}

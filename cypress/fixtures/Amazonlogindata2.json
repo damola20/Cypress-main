@@ -1,0 +1,13 @@
+[{
+    "email": "damolabamijoko@gmail.com",
+    "password": "Sacristy1234.",
+    "expected_url": "/?ref_=nav_ya_signin",
+    "description": "Valid login test"
+},
+{
+    "email": "damolabamijoko@gmail.com",
+    "password": "fjijdee",
+    "expected_url": "/ap/signin",
+    "description": "invalid login test"
+}
+]
