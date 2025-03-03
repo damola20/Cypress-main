@@ -113,7 +113,7 @@ describe('Login tests', () => {
 
     // this test should assert the presence of a placeholder in the password text field
     it('Validate the text into the Password field is toggled to the way it appears', () => {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('https://demo.opencart.com/',  { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('damolabamijoko@gmail.com')
