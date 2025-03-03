@@ -26,5 +26,49 @@ describe("reqres API methods", function(){
         expect(jsonData.body.total_pages).to.equal(2)
         });
     });
+
+
+    // Validate that data is an array and contains required properties
+    it("Validate that data is an array and contains required properties", function(){
+        cy.request("GET", "https://reqres.in/api/unknown").then((jsonData) => {
+            // Validate that "data" is an array and not empty
+            expect(jsonData.body.data).to.be.an("array").that.is.not.empty;
+    
+            // Iterate through each item in the array and validate properties
+            jsonData.body.data.forEach((item) => {
+                expect(item).to.have.property("id");
+                expect(item).to.have.property("name");
+                expect(item).to.have.property("year");
+                expect(item).to.have.property("color");
+                expect(item).to.have.property("pantone_value");
+            });
+        });
+    });
+
+        // Validate that support object contains required properties
+    it("Validate that support object contains required properties", function(){
+        cy.request("GET", "https://reqres.in/api/unknown").then((jsonData) => {
+            // Validate that "support" object exists
+            expect(jsonData.body).to.have.property("support");
+    
+            // Validate that "support" object contains required properties
+            expect(jsonData.body.support).to.have.property("url");
+            expect(jsonData.body.support).to.have.property("text");
+        });
+    });
+
+    // Validate the value of the support object properties
+    it("Validate the value of the support object property", function(){
+        cy.request("GET", "https://reqres.in/api/unknown").then((jsonData) => {
+            // Validate the value of support object property
+            expect(jsonData.body.support.url).to.equal("https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral");
+            expect(jsonData.body.support.text).to.equal("Tired of writing endless social media content? Let Content Caddy generate it for you.");
+        });
+    });
+    
+
+
+
+
     
 });
