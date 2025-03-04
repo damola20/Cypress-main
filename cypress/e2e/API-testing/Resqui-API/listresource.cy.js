@@ -1,9 +1,6 @@
-describe("reqres API methods", function(){
+describe("list resource", function(){
     it("List resource and validate structure of the JSON response", function(){
         cy.request("GET", "https://reqres.in/api/unknown").then((jsonData) => {
-            // Log the full response
-            cy.log(JSON.stringify(jsonData.body));
-            console.log(jsonData.body); // Logs in the browser console
 
             // Validate response structure
             expect(jsonData.status).to.eq(200);
@@ -65,10 +62,6 @@ describe("reqres API methods", function(){
             expect(jsonData.body.support.text).to.equal("Tired of writing endless social media content? Let Content Caddy generate it for you.");
         });
     });
-    
-
-
-
 
     
 });
