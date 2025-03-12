@@ -28,5 +28,17 @@
 // cypress/support/commands.js
 import "cypress-real-events";
 
+
+// custom commands
+Cypress.Commands.add('login', (username, password) => {
+    cy.visit('https://opensource-demo.orangehrmlive.com/')
+    cy.get('input[name="username"]').type(username);
+    cy.get('input[name="password"]').type(password);
+    cy.get('button.orangehrm-login-button').click();
+    cy.url().should('include', '/dashboard');
+    cy.get('h6').should('contain.text', 'Dashboard')
+    
+})
+
   
   

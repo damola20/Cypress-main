@@ -13,7 +13,7 @@ describe('Login Test Suite', () => {
         const password = 'admin123'; // Replace with valid test password
         loginPage.login(username, password);
     });
-    // Invalid login test
+    // Invalidd login test
     it('Should display error message when logged in with invalid credentials', () => {
         const invalidloginPage = new invalidLoginPage()
         const username = 'sfff'; // Replace with invalid test username
