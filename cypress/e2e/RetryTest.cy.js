@@ -1,5 +1,5 @@
 describe('Retry Rerun Suite',()=>{
-
+    //class tests
     it('Retry Rerun Test',{retries:2},()=>{
 
         cy.visit('https://www.google.com/search?q=javascript+by+testers+talk')
