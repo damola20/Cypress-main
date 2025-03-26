@@ -11,7 +11,8 @@ module.exports = defineConfig({
     defaultCommandTimeout: 60000, // default global command timeout
     reporter: 'cypress-mochawesome-reporter', // makes an html reports for test
     screenshotOnRunFailure: false, // disables screenshot on run-failure failure
-    pageLoadTimeout: 120000, // default page load timeout  
+    pageLoadTimeout: 120000, // default page load timeout
+    downloadsFolder: 'cypress/downloads', // downloads
   
     
     
