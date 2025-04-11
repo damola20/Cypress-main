@@ -1,2 +1,2 @@
 # cypress-automation
-my updated cypress tests 
+my cypress tests 
