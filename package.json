@@ -9,6 +9,7 @@
   "author": "Damo",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^5.2.0",
     "cypress": "^13.17.0",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",
