@@ -1,6 +1,6 @@
 describe('Search functionality tests', () => {
     beforeEach(() => {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('dbamijoko@yahoo.com')

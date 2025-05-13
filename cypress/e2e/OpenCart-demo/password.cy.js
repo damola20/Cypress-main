@@ -1,6 +1,6 @@
 describe(' forgot Password tests', () => {
 beforeEach(() => {
-    cy.visit('https://demo.opencart.com/')
+    cy.visit('http://localhost/opencart/')
 })
 
     it('should validate that user is able to reset password', () => {

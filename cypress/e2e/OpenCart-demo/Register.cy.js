@@ -1,6 +1,6 @@
 describe('Register tests', () => {
     it('Validate registering an account by providing all the field', ()=> {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Register').click()
         cy.get('#input-firstname').type('lopsin')
@@ -13,7 +13,7 @@ describe('Register tests', () => {
     })
 
     it('Validate proper notification messages are displayed when user continues with an empty field', ()=> {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Register').click()
         cy.contains('Continue').click()
@@ -29,7 +29,7 @@ describe('Register tests', () => {
     })
 
     it('Validate Registering an Account when \'\Yes\' option is selected for Newsletter field', ()=> {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Register').click()
         cy.get('#input-firstname').type('alele')
@@ -43,7 +43,7 @@ describe('Register tests', () => {
     })
 
     it('Validate Registering an Account when \'\No\' option is selected for Newsletter field', ()=> {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Register').click()
         cy.get('#input-firstname').type('alele')
@@ -56,7 +56,7 @@ describe('Register tests', () => {
     })
 
     it('Validate different ways of navigating to \'Register Account\' page', ()=> {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Register').click()
         cy.url().should('include', '/en-gb?route=account/register')
@@ -68,7 +68,7 @@ describe('Register tests', () => {
 
 
     it('Validate Registering an Account by providing the existing account details (i.e. existing email address)', ()=> {
-        cy.visit('https://demo.opencart.com/')
+        cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Register').click()
         cy.get('#input-firstname').type('damola')
@@ -83,7 +83,7 @@ describe('Register tests', () => {
     })
 
     it('Validate Registering an Account by providing an invalid email address into the E-Mail field', ()=> {
-           cy.visit('https://demo.opencart.com/')
+           cy.visit('http://localhost/opencart/')
            cy.get('a.dropdown-toggle').contains('My Account').click()
            cy.get('a').contains('Register').click()
            cy.get('#input-firstname').type('damola')
@@ -97,7 +97,7 @@ describe('Register tests', () => {
    })
 
    it('Validate all the fields in the Register Account page have the proper placeholders', () => {
-    cy.visit('https://demo.opencart.com/')
+    cy.visit('http://localhost/opencart/')
     cy.get('a.dropdown-toggle').contains('My Account').click()
     cy.get('a').contains('Register').click()
     cy.get('#input-firstname').should('have.attr', 'placeholder', 'First Name')
@@ -107,7 +107,7 @@ describe('Register tests', () => {
    })
 
    it('Validate all the mandatory fields in the Register Account page are marked with red color * symbol', () => {
-    cy.visit('https://demo.opencart.com/')
+    cy.visit('http://localhost/opencart/')
     cy.get('a.dropdown-toggle').contains('My Account').click()
     cy.get('a').contains('Register').click()
     cy.contains('Continue').click()
@@ -119,7 +119,7 @@ describe('Register tests', () => {
 
 
    it('Validate Registering an Account by providing the existing account details (i.e. existing email address', ()=> {
-    cy.visit('https://demo.opencart.com/')
+    cy.visit('http://localhost/opencart/')
     cy.get('a.dropdown-toggle').contains('My Account').click()
     cy.get('a').contains('Register').click()
     cy.get('#input-firstname').type('damola')
@@ -149,7 +149,7 @@ it('Validate Registering the Account without selecting the \'Privacy Policy\' ch
 
 
 it('Validate the Password text entered into the \'Password\' and \'Password Confirm\' field of \'Register Account\' functionality is toggled to hide its visibility', ()=> {
-    cy.visit('https://demo.opencart.com/')
+    cy.visit('http://localhost/opencart/')
     cy.get('a.dropdown-toggle').contains('My Account').click()
     cy.get('a').contains('Register').click()
     cy.get('#input-password').type('12345678')
@@ -158,7 +158,7 @@ it('Validate the Password text entered into the \'Password\' and \'Password Conf
 })
 
 it('Validate the Breadcrumb, Page Heading, Page URL, Page Title of \'Register Account\' Page', ()=> {
-    cy.visit('https://demo.opencart.com/')
+    cy.visit('http://localhost/opencart/')
     cy.get('a.dropdown-toggle').contains('My Account').click()
     cy.get('a').contains('Register').click()
     cy.get('li.breadcrumb-item > a').should('be.visible')
