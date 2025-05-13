@@ -14,6 +14,7 @@ module.exports = defineConfig({
     screenshotOnRunFailure: false, // disables screenshot on run-failure failure
     pageLoadTimeout: 120000, // default page load timeout
     downloadsFolder: 'cypress/downloads', // downloads
+    chromeArgs: ['--disable-save-password-bubble'], // disables save password bubble (the popup that appears when you enter a password in a form)
   
     
     
