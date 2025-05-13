@@ -1,6 +1,6 @@
 describe('Login tests', () => {
-    it.skip('Validate logging into the Application using valid credentials', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate logging into the Application using valid credentials', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('damolabamijoko@gmail.com')
@@ -9,8 +9,8 @@ describe('Login tests', () => {
         cy.url().should('include', 'route=account/account&customer_token=')
     })
 
-    it.skip('Validate logging into the Application using invalid credentials (i.e. Invalid email address and Invalid Password', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate logging into the Application using invalid credentials (i.e. Invalid email address and Invalid Password', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('damolabamxixiijoko@gmail.com')
@@ -22,8 +22,8 @@ describe('Login tests', () => {
         
     })
 
-    it.skip('Validate logging into the Application using invalid email address and valid Password', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate logging into the Application using invalid email address and valid Password', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('bamijokodamoljjja@gmail.com')
@@ -35,8 +35,8 @@ describe('Login tests', () => {
     })
 
 
-    it.skip('Validate logging into the Application using valid email address and invalid Password', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate logging into the Application using valid email address and invalid Password', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('damolabamijoko@gmail.com')
@@ -48,8 +48,8 @@ describe('Login tests', () => {
     })
 
     
-    it.skip('Validate logging into the Application without providing any credentials', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate logging into the Application without providing any credentials', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.contains('button', 'Login').click()
@@ -60,8 +60,8 @@ describe('Login tests', () => {
 
 
 
-    it.skip('Validate logging into the Application without providing any credentials', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate logging into the Application without providing any credentials', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.contains('a', 'Forgotten Password').should('be.visible').click()
@@ -72,8 +72,8 @@ describe('Login tests', () => {
     })
 
 
-    it.skip('Validate E-Mail Address and Password text fields in the Login page have the place holder text ', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate E-Mail Address and Password text fields in the Login page have the place holder text ', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').should('have.attr', 'placeholder', 'E-Mail Address')
@@ -81,8 +81,8 @@ describe('Login tests', () => {
        
     })
 
-    it.skip('Validate Logging into the Application and browsing back using Browser back button, user should maintain login session', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate Logging into the Application and browsing back using Browser back button, user should maintain login session', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('damolabamijoko@gmail.com')
@@ -95,8 +95,8 @@ describe('Login tests', () => {
     })
 
 
-    it.skip('Validate Loggingout from the Application and browsing back using Browser back button', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate Loggingout from the Application and browsing back using Browser back button', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#input-email').type('damolabamijoko@gmail.com')
@@ -121,8 +121,8 @@ describe('Login tests', () => {
        
     })
 
-    it.skip('Validate the UI of the Login page', () => {
-        cy.visit('https://demo.opencart.com/')
+    it('Validate the UI of the Login page', () => {
+        cy.visit('https://demo.opencart.com/' , { failOnStatusCode: false })
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
         cy.get('#form-login > h2:first-child').should('be.visible')

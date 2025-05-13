@@ -6,6 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
   
     },
+    chromeWebSecurity: false, // disables web security
     experimentalStudio: true, // Enable Cypress Studio
     video: false, // disables video recording
     defaultCommandTimeout: 60000, // default global command timeout
