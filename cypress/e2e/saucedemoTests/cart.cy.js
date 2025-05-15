@@ -17,7 +17,7 @@ describe('cart functionality tests', () => {
         cy.get('#login-button').click()
         cy.get('.btn_inventory').first().click()
         cy.get('.shopping_cart_badge').should('have.text', '1')
-        cy.get('.shopping_cart_link').click()
+        cy.get('.shopping_cart_link').click()  
         cy.get('.cart_item').should('be.visible')
         cy.get('.btn_secondary.cart_button').click()
         cy.get('.cart_item').should('not.exist')

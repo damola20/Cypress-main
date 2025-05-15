@@ -9,7 +9,7 @@ describe('Login tests', () => {
         cy.url().should('include', 'route=account/account&customer_token=')
     })
 
-    it.only('Validate logging into the Application using invalid credentials (i.e. Invalid email address and Invalid Password', () => {
+    it('Validate logging into the Application using invalid credentials (i.e. Invalid email address and Invalid Password', () => {
         cy.visit('http://localhost/opencart/')
         cy.get('a.dropdown-toggle').contains('My Account').click()
         cy.get('a').contains('Login').click()
@@ -91,7 +91,7 @@ describe('Login tests', () => {
         cy.url().should('include', 'route=account/account&customer_token=')
         cy.go('back')
         // reassert that user is still on the same page
-        cy.url().should('include', 'rote=account/account&customer_token=')
+        cy.url().should('include', 'route=account/account&customer_token=')
     })
 
 
@@ -107,7 +107,7 @@ describe('Login tests', () => {
         cy.get('a').contains('Logout').click()
         cy.go('back')
         // reassert that user is still on the same page
-        cy.url().should('include', 'rote=account/account&customer_token=')
+        cy.url().should('include', 'route=account/account&customer_token=')
     })
 
 
